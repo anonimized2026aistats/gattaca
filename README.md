@@ -14,9 +14,9 @@ Python 3.14 is not currently supported because `bang-gpu` depends on `numba==0.6
 ## Local
 - Clone the three repositories next to each other:
     ```sh
-    git clone git@github.com:anonimized2026aistats/bang.git
-    git clone git@github.com:anonimized2026aistats/gym-PBN-stac.git
-    git clone git@github.com:anonimized2026aistats/gattaca.git
+    git clone https://github.com/anonimized2026aistats/bang.git
+    git clone https://github.com/anonimized2026aistats/gym-PBN-stac.git
+    git clone https://github.com/anonimized2026aistats/gattaca.git
     cd gattaca
     ```
 - Create and activate a Python environment:
