@@ -1,11 +1,29 @@
-# SB3
-stable-baselines3[extras]
-sb3-contrib
-pytest
-pygame
-tensorboard
-wandb
-imageio
-# PBN
+# Core numeric/scientific stack
+numba==0.61.0; python_version < "3.14"
+numpy
+pandas
+scipy
+scikit-learn
+networkx
+sympy
+tqdm
+psutil
+
+# Deep learning
+torch-geometric
+
+# Environments and Boolean-network tooling
+gym
 gymnasium==0.27.0
-gym-PBN[vis]==1.1.1
+xlrd
+plotly-express==0.4.1
+kaleido
+
+# Experiment logging and plotting
+wandb
+tensorboard
+matplotlib
+seaborn
+
+# Development/test helpers
+pytest

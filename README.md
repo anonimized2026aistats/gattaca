@@ -6,24 +6,41 @@ This project extends prior work on pbn-STAC and gym-pbn-STAC, which in turn buil
 
 # Environment Requirements
 - CUDA 11.3+
-- Python 3.9+
+- Python >=3.10,<3.14
+
+Python 3.14 is not currently supported because `bang-gpu` depends on `numba==0.61.0`, which supports Python versions >=3.10,<3.14.
 
 # Installation
 ## Local
-- Create a python environment using PIP:
+- Clone the three repositories next to each other:
     ```sh
+    git clone git@github.com:anonimized2026aistats/bang.git
+    git clone git@github.com:anonimized2026aistats/gym-PBN-stac.git
+    git clone git@github.com:anonimized2026aistats/gattaca.git
+    cd gattaca
+    ```
+- Create and activate a Python environment:
+    ```sh
+    python --version
     python3 -m venv .env
     source .env/bin/activate
     ```
-    For the last line, use `.\env\Scripts\activate` if on Windows.
+    Use a Python 3.10, 3.11, 3.12, or 3.13 interpreter. For the last line, use `.\.env\Scripts\Activate.ps1` if on Windows PowerShell.
 - Install [PyTorch](https://pytorch.org/get-started/locally/):
     ```sh
     python -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
     ```
-- Install the package and its dependencies dependencies:
+- Install the local BANG and gym-PBN packages:
+    ```sh
+    python -m pip install -e ../bang
+    python -m pip install -e ../gym-PBN-stac
+    ```
+- Install the remaining GATTACA dependencies:
     ```sh
     python -m pip install -r requirements.txt
     ```
+
+Do not install `gym-PBN` from PyPI for this codebase; the PyPI package may pull the deprecated `sklearn` dependency and does not necessarily include the BANG-backed environment used by `train_bang.py`.
 
 # Models
 All trained models are available via google drive:
