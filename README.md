@@ -43,8 +43,19 @@ Python 3.14 is not currently supported because `bang-gpu` depends on `numba==0.6
 Do not install `gym-PBN` from PyPI for this codebase; the PyPI package may pull the deprecated `sklearn` dependency and does not necessarily include the BANG-backed environment used by `train_bang.py`.
 
 # Models
-All trained models are available via google drive:
-https://drive.google.com/drive/folders/1qLV0IdBfFg-MFj28WtYGdy6pYK63YfUs?usp=sharing
+Trained checkpoints are included in the [models directory](models/) and stored with Git LFS. After cloning, run:
+
+```sh
+git lfs install
+git lfs pull
+```
+
+The Bladder and ABA checkpoints are:
+
+| Model | Checkpoint |
+| ----- | ---------- |
+| Bladder | [bdq_189000.pt](models/bang_pbn35_bladder_aaai26/bdq_189000.pt) |
+| ABA | [bdq_30000.pt](models/bang_pbn81_aba_aaai26/bdq_30000.pt) |
 
 # Running
 - Use `train_gattaca.py` to train a DDQN agent. It's a command line utility so you can check out what you can do with it using `--help`.
