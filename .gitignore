@@ -143,6 +143,16 @@ outs/
 data/*
 kaban/*
 attractors/*
+!attractors/67_1_attractors.pkl
+!attractors/aba_aaai26.pkl
+!attractors/bladder_aaai26.pkl
+!attractors/cd4_retrain_p64.pkl
+!attractors/exp_bortezomib_alt_match.pkl
+!attractors/exp_mapk_match.pkl
+!attractors/exp_mcf7_match.pkl
+!attractors/exp_tdiff_learning_fixed.pkl
+!attractors/exp_tlgl_match.pkl
+!attractors/tdiff_jun_retry.pkl
 modele_andrzeja/*
 
 # Anonymous release hygiene
